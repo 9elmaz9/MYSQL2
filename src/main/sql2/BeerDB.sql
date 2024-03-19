@@ -16,7 +16,7 @@ CREATE  TABLE Beers
     CONSTRAINT Beers_Brewer FOREIGN KEY (BrewerId)REFERENCES Brewers(Id)
 
 );
-
+;
 
 
 
