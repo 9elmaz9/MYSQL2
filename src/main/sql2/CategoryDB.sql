@@ -4,6 +4,7 @@ CREATE  TABLE Categories
     Id INT  (11) NOT NULL AUTO_INCREMENT,
     Category varchar(50) DEFAULT NULL,
     PRIMARY KEY (Id)
+
 );
 
 

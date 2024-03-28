@@ -1,6 +1,6 @@
 
 
-/* A - We select manufacturers with above average turnover*/
+/* A - We choose manufacturers with turnover exceeding the average.*/
 
 SELECT *
 FROM brewers
@@ -9,7 +9,7 @@ WHERE turnover > (SELECT AVG(turnover)
 
 
 
-/* B -Select all beers with minimum or maximum alcohol content*/
+/* B -Retrieve all beers with the lowest or highest alcohol content.t*/
 
 SELECT *
 FROM Beers
@@ -21,7 +21,7 @@ WHERE alcohol = (SELECT MIN(alcohol)
 
 
 
-/* C -We select all beers with an alcohol content above average and with a producer turnover above average*/
+/* C -We choose all beers with alcohol content exceeding the average, along with breweries having a turnover above average.*/
 
 SELECT Beers.* FROM Beers
 JOIN brewers ON Beers.BrewerId = BrewerId
@@ -31,7 +31,7 @@ WHERE Beers.alcohol > (SELECT AVG(alcohol)
 
 
 
-/* D - Select a list of all producers with the price and name of their most expensive beer*/
+/* D - Retrieve a list of all brewers with the price and name of their most expensive beer.*/
 
 
 SELECT BrewerId, brewers.Name
